@@ -1,13 +1,25 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+  <div class="mw7 center">
+    {{ partial "jumbotron" (dict "title" .Title "subtitle" .Params.subtitle) }}
+  </div>
 
-{{ partial "short-text" .Params.blurb}}
+  {{ partial "divider" . }}
 
-{{ partial "2-up" .Params }}
+  <div class="mw7 center">
+    {{ partial "short-text" .Params.blurb}}
+  </div>
 
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
+  <div class="mw7 center">
+    {{ partial "2-up" .Params }}
+  </div>
 
-{{ partial "blog" . }}
+  <div class="mw7 center">
+    {{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
+  </div>
+  
+  <div class="mw7 center">
+    {{ partial "blog" . }}
+  </div>
 
 {{ end }}

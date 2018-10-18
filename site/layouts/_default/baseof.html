@@ -1,9 +1,19 @@
 <!doctype html>
 <html lang="en">
   {{ partial "head" . }}
-  <body class="bg-off-white black">
-    {{ partial "nav" . }}
-    {{ block "main" . }}{{ end }} 
-    {{ partial "footer" . }} 
+  <body class="ph3 bg-off-white black">
+    <main class="relative">
+      <div class="mw7 center">
+        <section class="pt5 pb4">
+          {{ partial "nav" . }}
+        </section>
+      </div>
+      {{ block "main" . }}
+      {{ end }}
+      {{ partial "divider" . }}
+      <div class="mw7 center">
+        {{ partial "footer" . }}
+      </div>
+    </main>
   </body>
 </html>
