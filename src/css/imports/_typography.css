@@ -39,6 +39,10 @@ sup {
   vertical-align: super;
 }
 
+.font-sans {
+  font-family: var(--sans);
+}
+
 /* Measure is limited to ~66 characters */
 .measure {
   max-width: 30em;

@@ -1,6 +1,5 @@
 ---
-title: "Great coffee with a conscience"
-subtitle: Support sustainable farming while enjoying a cup
+title: "PostPost is a small studio focused on product design, web, branding, and strategy."
 image: /img/home-jumbotron.jpg
 blurb:
     heading: Why Kaldi?
