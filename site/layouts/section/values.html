@@ -1,17 +1,17 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
+  <div class="mw7 center">
+    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
+  </div>
 
-<div class="mw7 center ph3 pt4">
-
-  {{ range $index, $element := .Params.values }}
-    {{ if modBool $index 2 }}
-      {{ partial "media-block" $element }}
-    {{ else }}
-      {{ partial "media-block-reverse" $element }}
+  <div class="mw7 center">
+    {{ range $index, $element := .Params.values }}
+      {{ if modBool $index 2 }}
+        {{ partial "media-block" $element }}
+      {{ else }}
+        {{ partial "media-block-reverse" $element }}
+      {{ end }}
     {{ end }}
-  {{ end }}
-
-</div>
+  </div>
 
 {{ end }}
